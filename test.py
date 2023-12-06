@@ -17,7 +17,7 @@ def parser():
     accessToken = "1093072820-yqh9ZaSSv49AMsxf24SC1N8wOEjQVVKbPJclw0X"
     accessTokenSecret = "1taOcANQ08iGeXf75ISaX7XSzG1omlzmO0T8nLBsjkHYN"
     bearer_token=None
-    client = tweepy.Client(bearer_token,key,keySecret,accessToken,accessTokenSecret)
+    
     
 
     
@@ -28,6 +28,8 @@ def parser():
     inlezen = f.read()
 
     if inlezen != feed[0].title:
+        
+        client = tweepy.Client(bearer_token,key,keySecret,accessToken,accessTokenSecret)
         
         print(feed[0])
         my_datetime_str = feed[0].published
